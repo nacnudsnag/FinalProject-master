@@ -1,0 +1,236 @@
+/*
+  Authors: Tom Lucy & Duncan Gans
+  Date: 12/15/17
+  
+  This is the CSS file for the data visualization page.
+
+  This link was used for the slider: https://www.w3schools.com/howto/howto_js_
+  rangeslider.asp
+
+  This link was used for the buttons: https://www.w3schools.com/howto/howto_cs
+  s_button_group.asp 
+
+*/
+
+body {
+    font-family: georgia;
+}
+
+a {
+    color: white;
+    font-size: 20px;
+    font-family: georgia;
+}
+
+/* style the navigation bar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    border-bottom: black solid;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding:1px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #d3d3d3;
+}
+
+/* position the page title */
+#header {
+    text-align: center;
+}
+
+/* style the axis labels for the SVG */
+text {
+    font-family: georgia;
+    fill: black;
+}
+
+/* style the axes for the bar graph */
+.x_axis {
+    fill: white;
+}
+
+.y_axis {
+    fill: white;
+}
+
+/* position and style the slider and animation tools */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 90%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: white; /* Grey background */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    z-index: 100;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+
+.slider::-moz-range-thumb {
+    width: 10px; /* Set a specific slider handle width */
+    height: 10px; /* Slider handle height */
+    background: maroon; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+/* stlye the buttons for changing parties */
+.button {
+    background-color: maroon;
+    border: 2px solid white;
+    width: 150px;
+    height: 50px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    z-index: 105;
+}
+
+.button:hover {
+  background-color: white;
+  border: 2px solid maroon;
+  color: maroon;
+}
+
+/* position the slider menu */
+.wrapper {
+    position: absolute;
+    left: 1%;
+    top: 30%;
+}
+
+.left {
+    font-family: georgia;
+    color: black;
+    font-size: 12px;
+}
+
+#menu {
+    z-index: 101;
+    left: -210px;
+    position: absolute;
+    top:40px;
+}
+
+/* position the bar graph */
+#BG {
+    position:absolute;
+    top: 15%;
+    right: 0;
+    margin:0 auto;
+    height:auto;
+    z-index: -1;
+    font-family: georgia;
+}
+
+/* position the chloropleth */
+#CHL {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    margin: 5 auto;
+    height:auto;
+    z-index: -1;
+    text: georgia;
+}
+
+/* position the chloropleth dropdown */
+#controlsCHL {
+    position:relative;
+    float:left;
+    top: 400px;
+    right: -250px;
+    margin: 0 auto;
+    z-index: 100;
+   
+    background: white;
+    color: black;
+    outline: none;
+    cursor: pointer;
+    font-family: georgia;
+    font-size: 12px;
+}
+
+/* position the bar graph dropdown */
+#controlsBG {
+    position: relative;
+    float: right;
+    top: 400px;
+    left: -150px;
+    margin: 0 auto;
+    z-index: 100;
+
+    background: white;
+    color: black;
+    outline: none;
+    cursor: pointer;
+    font-family: georiga;
+    font-size: 12px;
+}
+
+/* position the masthead on the bottom of the page */
+#masthead {
+    position: absolute;
+    text-align: center;
+    top: 675px;
+    color: black;
+    z-index: 101;
+    width: 100%;
+    height: auto;
+    font-family: georgia;
+    font-size: 10px;
+}
+
+/* position the description below the graphs and above the masthead */
+#info {
+    position: absolute;
+    top: 600px;
+    color: black;
+    z-index: 101;
+    left: 25%;
+    width: 50%;
+    height: auto;
+    font-family: georgia;
+    font-size: 12px;
+}
+
+/* highlight the current selections in the description */
+span {
+    color: #c76706;
+}
+
+/* color the party selection buttons */
+#democrat {
+    background-color: #00a6ef;
+}
+
+#republican {
+    background-color: #e91d0e;
+}
+
+#both {
+    background-color: #c76706;
+}

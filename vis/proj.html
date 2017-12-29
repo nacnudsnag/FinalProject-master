@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Political Advertisements During the 2015-2016 Election Cycle</title>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="proj.css">
+</head>
+
+<body>
+   <ul>
+      <li><a href="home.html"><h5>Home</h5></a></li>
+      <li><a href="proj.html"><h5>Data Visualization</h5></a></li>
+      <li><a href="projectDescrip.html"><h5>Project Description</h5></a></li>
+      <li><a href="dataDescrip.html"><h5>Data Description</h5></a></li>
+      <li><a href="colophon.html"><h5>Colophon</h5></a></li>
+    </ul>
+
+    <h1 id="header">Political Advertisements in the 2015-2016 Election
+    Cycle</h1> 
+
+  <div class="wrapper">
+    <img class="left" id="animate" src="play_button.png" 
+	 width="30" height="30" >
+    <div id="slidecontainer" class="left">
+      <input type="range" min="0" max="24" value="0" 
+	     class="slider" id="myRange">
+    </div>
+    <span id="date" class="left">2015-2016</span>
+
+    <form>
+      <button class="button" type="button" id="both">Both</button>
+      <button class="button" type="button" id="democrat">Democrats</button>
+      <button class="button" type="button" id="republican">Republicans</button>
+    </form>
+  </div>
+
+  <script type="text/javascript" src="proj.js"> </script>
+
+  <select id="controlsCHL">
+    <optgroup label="View Options" id="CHLmetric" value="">
+      <option value="Ad Tone">Ad Tone</option>
+      <option value="Distribution by Party">Distribution by Party</option>
+      <option value="Total Ads">Total Ads</option>
+      <option value="Total Spending">Total Spending</option>
+    </optgroup>
+  </select>
+
+  <select id="controlsBG">
+    <optgroup label="View Options" id="BGmetric" value="">
+      <option value="Total Ads per Issue">Total Ads per Issue</option>
+      <option value="Frequency of Ad Cost">Frequency of Ad Cost</option>
+      <option value="Total Ads per Party">Total Ads per Party</option>
+      <option value="Total Ads per TV Genre">Total Ads per TV Genre</option>
+    </optgroup>
+  </select>
+
+  <div id="info">
+    <p>You are currently viewing <span id="chlSelect">Ad Tone</span> on the
+    chloropleth and  <span id="bgSelect">Total Ads per Issue</span> on the bar
+    graph for <span id="party">both parties</span>. Click on the play button
+    on the left of the page to watch as 
+    these attributes change month to month on their corresponding
+    graphs. Alternatively, click and drag the slider to view an individual
+    month. For most selections on the chloropleth, darker colors indicate
+    higher values. However, the opposite is true for "Ad Tone."</p>
+  </div>
+
+  <div id="masthead">
+      <p>A Project by Tom Lucy and Duncan Gans, Fall 2017</p>
+  </div>
+</body>
